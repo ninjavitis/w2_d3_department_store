@@ -1,0 +1,17 @@
+<h1><%= @item.id ? 'Edit' : 'Create' %> Item</h1>
+<hr />
+<%= form_for [@department, @item] do |f| %>
+  <%= f.label "Item Name" %>
+  <%= f.text_field :name%>
+  <br />
+  <%= f.label "Item Description" %>
+  <%= f.text_area :description, required: true %>
+  <br />
+  <%= f.label "Item Style" %>
+  <%= f.text_field :style, required: true %>
+  <br />
+  <%= f.label "Price" %>
+  <%= f.text_field :price, required: true %>
+
+  <%= f.submit %>
+<% end %>

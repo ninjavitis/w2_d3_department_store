@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :style
       t.string :price
+      t.belongs_to :department, foreign_key: true
 
       t.timestamps
     end
